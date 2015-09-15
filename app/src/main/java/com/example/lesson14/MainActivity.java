@@ -47,22 +47,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onStart() {
         super.onStart();
-        // TODO 1
-        getSupportLoaderManager().initLoader(LOADER_ID, null, this);
+        // TODO 1 initLoaderしましょう
     }
 
     @Override
     public Loader<List<ChatItem>> onCreateLoader(int id, Bundle args) {
-        // TODO 2
-        ChatAsyncTaskLoader loader = new ChatAsyncTaskLoader(this);
-        return loader;
+        // TODO 2 ChatAsyncTaskLoaderを作成して、return しましょう
+        return null;
     }
 
     @Override
     public void onLoadFinished(Loader<List<ChatItem>> loader, List<ChatItem> data) {
-        // TODO 3
+        // TODO 3 mChatItemsに結果(data)をaddAllしましょう
 
-        mChatItems.addAll(data);
 
         mAdapter.notifyDataSetChanged();
     }
